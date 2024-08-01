@@ -1,24 +1,23 @@
+
+
+
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "backend/app.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "backend/app.py"
-      }
-    ],
-    "env": {
-      "SQLALCHEMY_DATABASE_URI": "sqlite:///users.db",
-      "JWT_SECRET_KEY": "grocery",
-      "CACHE_TYPE": "redis",
-      "CACHE_REDIS_HOST": "localhost",
-      "CACHE_REDIS_PORT": "6379",
-      "CACHE_REDIS_URL": "redis://localhost:6379"
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ],
+  "env": {
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///users.db",  // Change to your production DB URI
+    "JWT_SECRET_KEY": "grocery",                     // Replace with your actual secret key
+    
   }
-  
+}
