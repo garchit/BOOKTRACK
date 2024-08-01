@@ -111,7 +111,7 @@ export default {
     methods: {
         async fetchBooks() {
             try {
-                const response = await axios.get(`/storebooks/${this.section_id}`);
+                const response = await axios.get(process.env.VUE_APP_URL+`/storebooks/${this.section_id}`);
                 this.books = response.data;
                 console.log('Books fetched:', this.books);
             } catch (error) {
@@ -120,7 +120,7 @@ export default {
         },
         async fetchRequestedBooksCount() {
             try {
-                const response = await axios.get(`/api/requested-books-count`, {
+                const response = await axios.get(process.env.VUE_APP_URL+`/api/requested-books-count`, {
                     params: { user_id: this.user_id }
                 });
                 this.requestedBooksCount = response.data.count;

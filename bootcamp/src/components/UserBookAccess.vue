@@ -154,7 +154,7 @@
     methods: {
       async fetchUserBookAccessData() {
         try {
-          const response = await axios.get('/api/user-access-data');
+          const response = await axios.get(process.env.VUE_APP_URL+'/api/user-access-data');
           this.userBookAccessData = response.data;
           console.log('User book access data:', this.userBookAccessData);
         } catch (error) {

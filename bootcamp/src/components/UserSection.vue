@@ -69,8 +69,9 @@ export default {
   methods: {
     async fetchSections() {
       try {
-        const response = await axios.get('/sections');
+        const response = await axios.get(process.env.VUE_APP_URL+'/sections');
         this.sections = response.data;
+        console.log(response)
         // localStorage.setItem("section_details", this.sections.id);
         console.log(this.user_id)
       } catch (error) {
