@@ -2,19 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "backend/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "backend/app.py"
     }
   ],
   "env": {
-    "SQLALCHEMY_DATABASE_URI": "sqlite:///users.db",  
-    "JWT_SECRET_KEY": "grocery",                     
-    
+    "SQLALCHEMY_DATABASE_URI": "sqlite:///users.db",
+    "JWT_SECRET_KEY": "grocery"
   }
 }
