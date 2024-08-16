@@ -7,12 +7,14 @@ It allows users to track and manage books effectively, providing functionalities
 
 - [Installation](#installation)
 - [Usage](#usage)
-
+- [Credentials](#credentials)
 
 - [Technologies Used](#technologies-used)
 - [Contributers](#contributers)
 - [License](#license)
-
+## Credentials 
+- Just sign-up using any username and password (only for testing and checking for Recuriters )
+- Just look out for admin roles -  as admin username and admin_password 
 
 ## Features
 
